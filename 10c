@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>String Operations</title>
+	<script>
+		// Get the input string from the user
+		const inputString = prompt("Enter a string:");
+
+		// Validate the input string
+		if (!/^[a-zA-Z]+$/.test(inputString)) {
+			alert("Invalid input! Please enter only alphabets (a-z).");
+		} else {
+			// Convert the string to lowercase
+			const lowercaseString = inputString.toLowerCase();
+
+			// Find the positions of all the vowels
+			const vowelPositions = {
+				a: lowercaseString.indexOf("a"),
+				e: lowercaseString.indexOf("e"),
+				i: lowercaseString.indexOf("i"),
+				o: lowercaseString.indexOf("o"),
+				u: lowercaseString.indexOf("u")
+			};
+
+			// Find the leftmost vowel
+			let leftmostVowel = null;
+			for (const vowel in vowelPositions) {
+				if (vowelPositions[vowel] !== -1 && (leftmostVowel === null || vowelPositions[vowel] < vowelPositions[leftmostVowel])) {
+					leftmostVowel = vowel;
+				}
+			}
+
+			// Print the leftmost vowel
+			if (leftmostVowel !== null) {
+				alert(`The leftmost vowel is "${leftmostVowel}" at position ${vowelPositions[leftmostVowel]}.`);
+			} else {
+				alert("No vowels found!");
+			}
+		}
+	</script>
+</head>
+<body>
+	<!-- Empty body - not used in this example -->
+</body>
+</html>
