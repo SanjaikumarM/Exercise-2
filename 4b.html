@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+</head>
+<body>
+    <h1>Library Management System</h1>
+    <h2>Enter Member Details</h2>
+    <label for="member-name">Name</label>
+    <input type="text" id="member-name">
+    <label for="member-id">ID:</label>
+    <input type="text" id="member-id">
+    <h2>Enter Book Details</h2>
+    <label for="book-title">Title:</label>
+    <input type="text" id="book-title">
+    <label for="book-author">Author:</label>
+    <input type="text" id="book-author">
+    <label for="book-id">ID:</label>
+    <input type="text" id="book-id">
+    <label for="book-issue-date">Issue Date:</label>
+    <input type="date" id="book-issue-date">
+    <label for="book-return-date">Return Date:</label>
+    <input type="date" id="book-return-date">
+    <button onclick="addBook()">Add Book</button>
+    <h2>Pending Books</h2>
+    <ul id="pending-books"></ul>
+    <script src="library-management.js"></script>
+</body>
+</html>
